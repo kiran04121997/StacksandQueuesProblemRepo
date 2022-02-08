@@ -13,20 +13,16 @@ namespace StackandQueuesProject
         static void Main(string[] args)
         {
             Console.WriteLine("Hello welcome to Stack And Que problem");
-            /// <summary>
-            /// Defines the entry point of the application.
-            /// </summary>
-            /// <param name="args">The arguments.</param>
-
+            Console.WriteLine("Welcome to Stack and Queue program using Linked List");
             CallStackQueue();
-
+            Console.ReadLine();
         }
         /// <summary>
         /// Calls the stack queue.
         /// </summary>
         public static void CallStackQueue()
         {
-           LinkedListStack linkedListStack = new LinkedListStack();
+            LinkedListStack linkedListStack = new LinkedListStack();
             bool CONTINUE = true;
             while (CONTINUE)
             {
@@ -36,10 +32,19 @@ namespace StackandQueuesProject
                 switch (choice)
                 {
                     case 1:
-                        Console.WriteLine("<---Creating A Stack--->");
+                        Console.WriteLine("<---Creating A Stack---> \n");
                         linkedListStack.Push(70);
                         linkedListStack.Push(30);
                         linkedListStack.Push(56);
+                        linkedListStack.Display();
+                        Console.WriteLine("\n<---PeekOperationInStack--->\n");
+                        linkedListStack.Peek();
+                        linkedListStack.Display();
+                        Console.WriteLine("\n<---PopOperation--->\n");
+                        linkedListStack.Pop();
+                        linkedListStack.Display();
+                        Console.WriteLine("\n<---PopTillStackBecomesEmpty--->\n");
+                        linkedListStack.IsEmpty();
                         linkedListStack.Display();
                         break;
                     case 2:
@@ -50,7 +55,7 @@ namespace StackandQueuesProject
                         break;
                 }
             }
-            Console.ReadLine();
         }
     }
 }
+
